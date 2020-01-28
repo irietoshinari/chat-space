@@ -4,16 +4,20 @@
 |email|string|null: false|
 |password|string|null: false|
 |nickname|string|null: false|
+### Association
 - has_many :tweets
 - has_many :comment
-## tweetsteテーブル
+- has_many :through
+
+## groups_テーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false|
 ### Association
 - belongs_to :user
 - has_many :comments
+- has_many :through
+
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
@@ -23,6 +27,7 @@
 ### Association
 - belongs_to :tweet
 - belongs_to :user
+
 ## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
