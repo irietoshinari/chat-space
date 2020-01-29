@@ -7,28 +7,28 @@
 ### Association
 - has_many :tweets
 - has_many :comment
-- has_many :through
+- has_many :groups,through: group_user
 
 ## groups_テーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- belongs_to :user
-- has_many :comments
-- has_many :through
+- has_many : messages
+- has_many : group_user
+- has_many :users, through: group_user
 
-## commentsテーブル
+### messages_テーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
+|body|text||
+|image|string||
+|group_id|integer||
+|user_id|integer||
 ### Association
-- belongs_to :tweet
-- belongs_to :user
 
-## groups_usersテーブル
+
+## group_userテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
