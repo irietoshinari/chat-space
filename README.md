@@ -5,8 +5,8 @@
 |password|string|null: false|
 |nickname|string|null: false|
 ### Association
-- has_many :tweets
-- has_many :comment
+- has_many :messages
+- has_many :group_user
 - has_many :groups,through: group_user
 
 ## groups_テーブル
@@ -23,12 +23,12 @@
 |------|----|-------|
 |body|text||
 |image|string||
-|group_id|integer||
-|user_id|integer||
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 ### Association
-
-
-## group_userテーブル
+- belongs_to :user
+- belongs_to :group
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
