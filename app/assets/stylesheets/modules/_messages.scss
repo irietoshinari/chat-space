@@ -15,8 +15,8 @@
   background-color: #253141;
     a{
       color: #ffffff;
-     float: right;
       text-decoration: none ;
+      
     }
     &-user-name{
       height: 100px;
@@ -48,7 +48,7 @@
 }
 
 .side-bar--group-list{
-  height: calc(100% - 100px);
+  height: calc(100vh - 100px);
   font-size: 15px;
   color: #ffffff;
   padding: 20px 20px;
@@ -82,14 +82,14 @@
   float: left;
   color: #333333;
   font-size: 20px;
-  padding: 35px 0px 27px 40px;
+  padding :35px 0px 27px 40px;
 }
 
 .member{
   float: left;
   font-size: 12px;
   color: #999999;
-  padding: 80px 0px 0px 40px;
+  padding: 15px 20px 20px 0px;
   position: absolute;
 }
 
@@ -109,7 +109,10 @@
 
 .chat-main--message-list{
   background-color: #fafafa;
-  height: calc(100% - 100px - 90px);
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+    background-color: #fafafa;
+    overflow: scroll;
 
   &_-messag-form{
 
@@ -152,53 +155,54 @@
 }
 
 
-  .chat-main--message-form{
+// フォーム部分
+.form {
+  background-color: #DDD;
+  height: 90px;
+  padding: 20px 40px;
+   form{
     display: flex;
-    background-color: #d2d2d2;
     .input-box{
-      display: flex;
-      width: 100%;
       position: relative;
-      display: flex;
-
-
-      &_text{
-        height: 50px;
-        width: 100%;
-        color: #434a54;
-        border-style: none;
+      width: 100%;
+      &__message {
+        position: relative;
         padding: 0 40px 0 10px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        margin-left: 40px;
-     }
-
-      &_image{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 1.3rem;
-        margin-top: 30px;
+        color: #434a54;
+        height: 50px;
+        width: calc(100% - 100px);
+        border-style: none;
       }
-
-      &_image_file{
-        display: none;
+      &__image {
+        position: absolute;
+        display: inline-block;
+        font-size: 1.3rem;
+        top: 10px;
+        right: 120px;
+        cursor: pointer;
+        .fa-image {
+          font:normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
+        .hidden {
+          display: none;
+        }
+      }
+      .submit-btn{
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38AEF0;
+        color: white;
+        cursor: pointer;
       }
     }
   }
-    .submit-btn{
-    width: 100px;
-    height: 50px;
-    float: right;
-    padding: 0 30px;
-    margin-left: 15px;
-    background-color: #38aef0;
-    color: #ffffff;  
-    padding-top: 10px;
-    padding-bottom: 40px;
-    margin-right: 40px;
-    margin-top: 30px;
+}
 
-    
-  } 
+
+  
