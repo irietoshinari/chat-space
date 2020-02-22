@@ -1,8 +1,6 @@
 $(function(){ 
-  var name = 'yamada';
-console.log(name + 'さん、こんばんは');
-
-  function buildHTML(message){
+  
+  function buildHTML(message){c
    if ( message.image ) {
      var html =
       `<div class="message" data-message-id=${message.id}>
