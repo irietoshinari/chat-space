@@ -66,7 +66,6 @@ $(function(){
 
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data("message-id");
-    console.log(last_message_id);
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -83,7 +82,7 @@ $(function(){
         $('.chat-main--message-list').animate({ scrollTop: $('.chat-main--message-list')[0].scrollHeight});
       }
     })
-    .fail(function() {
+    .alert(function() {
       console.log('error');
     });
   };
