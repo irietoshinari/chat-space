@@ -10,9 +10,8 @@
     .edit-btn
       = link_to "Edit", edit_group_path(@group.id)
 
-  .chat-main--message-list
-    .message
-      = render @messages
+  .chat-main--message-list      
+    = render @messages
       
 
   .form
