@@ -47,8 +47,6 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
-  
-  Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
 end
 
 group :development do
