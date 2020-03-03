@@ -3,7 +3,7 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
+         <div class="message__upper-message">
            <div class="upper-message__user-name">
              ${message.user_name}
            </div>
@@ -22,7 +22,7 @@ $(function(){
    } else {
      var html =
       `<div class="message" data-message-id=${message.id}>
-         <div class="upper-message">
+         <div class="message__upper-message">
            <div class="upper-message__user-name">
              ${message.user_name}
            </div>
@@ -81,7 +81,7 @@ $(function(){
         $('.chat-main--message-list').animate({ scrollTop: $('.chat-main--message-list')[0].scrollHeight});
       }
     })
-    .alert(function() {
+    .fail(function() {
       alert('error');
     });
   };
